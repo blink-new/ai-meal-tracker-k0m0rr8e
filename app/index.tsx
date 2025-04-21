@@ -1,7 +1,15 @@
 
-import { YStack, Text, View, Button, Theme, XStack, Image } from 'tamagui';
-import { TouchableOpacity } from 'react-native';
-import { Camera } from 'lucide-react-native';
+import { YStack, Text, View, Theme, Image } from 'tamagui';
+import { TouchableOpacity, Platform } from 'react-native';
+
+let CameraIcon: any;
+if (Platform.OS === 'web') {
+  // @ts-ignore
+  CameraIcon = require('lucide-react').Camera;
+} else {
+  // @ts-ignore
+  CameraIcon = require('lucide-react-native').Camera;
+}
 
 export default function Home() {
   return (
@@ -95,7 +103,7 @@ export default function Home() {
             alert('Add Meal (coming soon!)');
           }}
         >
-          <Camera color="white" size={32} />
+          <CameraIcon color="white" size={32} />
         </TouchableOpacity>
       </View>
     </Theme>
