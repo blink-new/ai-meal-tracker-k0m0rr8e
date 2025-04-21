@@ -31,7 +31,8 @@
     "react-native-url-polyfill": "^2.0.0",
     "react-native-web": "^0.19.13",
     "tamagui": "^1.126.1",
-    "lucide-react-native": "latest"
+    "lucide-react-native": "latest",
+    "react-native-svg": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
